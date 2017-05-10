@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         LinearLayout lyout=new LinearLayout(this);
         lyout.setOrientation(LinearLayout.VERTICAL);
         LinearLayout.LayoutParams Linear =new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.MATCH_PARENT);
-         lyout.setLayoutParams(Linear);
+        lyout.setLayoutParams(Linear);
 
         final EditText editText=new EditText(this);
         editText.setHint("enter number");
@@ -24,15 +24,15 @@ public class MainActivity extends AppCompatActivity {
         lyout.addView(editText);
 
         final EditText editText1=new EditText(this);
-        editText.setHint("enter number");
+        editText1.setHint("enter number");
         LinearLayout.LayoutParams Ltext2=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
-        editText.setLayoutParams(Ltext2);
+        editText1.setLayoutParams(Ltext2);
         lyout.addView(editText1);
 
         final EditText editText2=new EditText(this);
-        editText.setHint("Result");
+        editText2.setHint("Result");
         LinearLayout.LayoutParams Ltext3=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
-        editText.setLayoutParams(Ltext3);
+        editText2.setLayoutParams(Ltext3);
         lyout.addView(editText2);
 
         Button bt=new Button(this);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         bt.setText("Add");
-        LinearLayout.LayoutParams But=new LinearLayout.LayoutParams(500,500);
+        LinearLayout.LayoutParams But=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         bt.setLayoutParams(But);
         lyout.addView(bt);
 
@@ -62,12 +62,10 @@ public class MainActivity extends AppCompatActivity {
                 Integer b=Integer.parseInt(str1);
                 Integer result=a-b;
                 editText2.setText(result.toString());
-
-
             }
         });
-        bt.setText("Sub");
-        LinearLayout.LayoutParams But1=new LinearLayout.LayoutParams(500,500);
+        bt1.setText("Sub");
+        LinearLayout.LayoutParams But1=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         bt.setLayoutParams(But1);
         lyout.addView(bt1);
 
@@ -84,8 +82,8 @@ public class MainActivity extends AppCompatActivity {
 
           }
       });
-        bt.setText("Mult");
-        LinearLayout.LayoutParams But2=new LinearLayout.LayoutParams(500,500);
+        bt2.setText("Mult");
+        LinearLayout.LayoutParams But2=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         bt.setLayoutParams(But2);
         lyout.addView(bt2);
 
@@ -97,15 +95,17 @@ public class MainActivity extends AppCompatActivity {
                 Integer a=Integer.parseInt(str);
                 String str1=editText1.getText().toString();
                 Integer b=Integer.parseInt(str1);
-                Integer result=a/b;
+                Integer result=a%b;
                 editText2.setText(result.toString());
 
             }
         });
-        bt.setText("Div");
-        LinearLayout.LayoutParams But3=new LinearLayout.LayoutParams(500,500);
+        bt3.setText("Div");
+        LinearLayout.LayoutParams But3=new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
         bt.setLayoutParams(But3);
         lyout.addView(bt3);
+        setContentView(lyout);
+
 
     }
 }
